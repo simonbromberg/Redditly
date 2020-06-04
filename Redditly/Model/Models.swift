@@ -1,0 +1,40 @@
+//
+//  Models.swift
+//  Redditly
+//
+//  Created by Simon Bromberg on 2020-06-04.
+//  Copyright © 2020 SBromberg. All rights reserved.
+//
+
+import Foundation
+
+struct Listing: Decodable {
+    let data: ListingData
+
+    struct ListingData: Decodable {
+        let children: [ArticleData]
+        let after: String?
+        let before: String?
+    }
+}
+
+struct ArticleData: Decodable {
+    let kind: String
+    let data: Article
+}
+
+struct Article: Decodable {
+    let id: String
+    
+    let title: String
+    
+    let thumbnail: String?
+    let thumbnailHeight: Float?
+    let thumbnailWidth: Float?
+
+    var hasThumbnail: Bool {
+        return thumbnail != nil &&
+            (thumbnailHeight ?? 0) > 0 &&
+            (thumbnailWidth ?? 0) > 0
+    }
+}
