@@ -11,7 +11,7 @@ import Foundation
 class ApiManager {
     static var shared = ApiManager()
 
-    var baseURL: String { "https://www.reddit.com/r/swift/.json" }
+    var baseURL: String { "https://www.reddit.com/r/swift/.json?raw_json=1" }
 
     private let defaultSession = URLSession(configuration: .default)
 

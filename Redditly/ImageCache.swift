@@ -12,6 +12,10 @@ import UIKit
 public final class ImageCache {
     private let cache = NSCache<NSString, UIImage>()
 
+    func removeAllObjects() {
+        cache.removeAllObjects()
+    }
+    
     subscript(index: String) -> UIImage? {
         get {
             return cache.object(forKey: NSString(string: index))

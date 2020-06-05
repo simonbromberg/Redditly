@@ -18,6 +18,8 @@
 		D49CD4902489525A003586FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49CD48E2489525A003586FD /* LaunchScreen.storyboard */; };
 		D49CD49224896074003586FD /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD49124896074003586FD /* ImageCache.swift */; };
 		D49CD4942489651F003586FD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD4932489651F003586FD /* ArticleViewController.swift */; };
+		D4D07F69248AE6D800BF8F93 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D07F68248AE6D800BF8F93 /* ReusableView.swift */; };
+		D4D07F6B248AE6E700BF8F93 /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		D49CD48F2489525A003586FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Redditly/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		D49CD49124896074003586FD /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Redditly/ImageCache.swift; sourceTree = "<group>"; };
 		D49CD4932489651F003586FD /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		D4D07F68248AE6D800BF8F93 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +152,19 @@
 				D49CD48B24895253003586FD /* Main.storyboard */,
 				D49CD48E2489525A003586FD /* LaunchScreen.storyboard */,
 				D49CD4832489438F003586FD /* ListingViewController.swift */,
-				D49CD4932489651F003586FD /* ArticleViewController.swift */,
+				D4D07F6C248AE6F000BF8F93 /* Article detail */,
+				D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */,
 			);
 			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		D4D07F6C248AE6F000BF8F93 /* Article detail */ = {
+			isa = PBXGroup;
+			children = (
+				D49CD4932489651F003586FD /* ArticleViewController.swift */,
+				D4D07F68248AE6D800BF8F93 /* ReusableView.swift */,
+			);
+			path = "Article detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +302,9 @@
 				D49CD4942489651F003586FD /* ArticleViewController.swift in Sources */,
 				D49CD4842489438F003586FD /* ListingViewController.swift in Sources */,
 				D45044AF2489429E003E4A6E /* AppDelegate.swift in Sources */,
+				D4D07F6B248AE6E700BF8F93 /* TableViewCells.swift in Sources */,
 				D49CD48A24894BD5003586FD /* ApiManager.swift in Sources */,
+				D4D07F69248AE6D800BF8F93 /* ReusableView.swift in Sources */,
 				D49CD4862489443E003586FD /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
