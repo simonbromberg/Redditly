@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarkdownKit
 
 class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var article: Article!
@@ -70,7 +71,7 @@ class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell: LabelCell = tableView.dequeueReusableCell(for: indexPath, identifier: type.identifier)
             cell.label.font = UIFont.systemFont(ofSize: 14)
             cell.label.textColor = .black
-            cell.label.text = article.body
+            cell.label.attributedText = markdownParser.parse(article.body)
             
             return cell
         case .score:
@@ -118,6 +119,11 @@ class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewD
         formatter.timeStyle = .medium
         formatter.doesRelativeDateFormatting = true
         return formatter
+    }()
+
+    private var markdownParser: MarkdownParser = {
+        let parser = MarkdownParser()
+        return parser
     }()
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

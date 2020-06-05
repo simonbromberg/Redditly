@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A43AB5A549CCD4CA34E3E6BF /* Pods_Redditly_RedditlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BE0E9A6956D1C9A0F76E51 /* Pods_Redditly_RedditlyUITests.framework */; };
 		D45044AF2489429E003E4A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45044AE2489429E003E4A6E /* AppDelegate.swift */; };
 		D45044B8248942A2003E4A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45044B7248942A2003E4A6E /* Assets.xcassets */; };
 		D45044C6248942A2003E4A6E /* RedditlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45044C5248942A2003E4A6E /* RedditlyTests.swift */; };
@@ -20,6 +21,8 @@
 		D49CD4942489651F003586FD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD4932489651F003586FD /* ArticleViewController.swift */; };
 		D4D07F69248AE6D800BF8F93 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D07F68248AE6D800BF8F93 /* ReusableView.swift */; };
 		D4D07F6B248AE6E700BF8F93 /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */; };
+		E11A74FC6EEE3638CBA75BB9 /* Pods_RedditlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A1C0FF0FEB2C2EDBC15E40 /* Pods_RedditlyTests.framework */; };
+		F318B18B2E7B67049AA44665 /* Pods_Redditly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB8254CFEEBC22BBCD7F8DF /* Pods_Redditly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2951C494B4EEF3AF89C5A828 /* Pods-RedditlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditlyTests.debug.xcconfig"; path = "Target Support Files/Pods-RedditlyTests/Pods-RedditlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		37A1C0FF0FEB2C2EDBC15E40 /* Pods_RedditlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		415509F1EE1A8EA18887D848 /* Pods-Redditly-RedditlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redditly-RedditlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Redditly-RedditlyUITests/Pods-Redditly-RedditlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EB8254CFEEBC22BBCD7F8DF /* Pods_Redditly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Redditly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D74A6819E4558C058D64BE /* Pods-Redditly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redditly.release.xcconfig"; path = "Target Support Files/Pods-Redditly/Pods-Redditly.release.xcconfig"; sourceTree = "<group>"; };
+		92BE0E9A6956D1C9A0F76E51 /* Pods_Redditly_RedditlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Redditly_RedditlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D3E1950EECA386585253A2 /* Pods-RedditlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditlyTests.release.xcconfig"; path = "Target Support Files/Pods-RedditlyTests/Pods-RedditlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3602480A24D5D53020B31D7 /* Pods-Redditly-RedditlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redditly-RedditlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Redditly-RedditlyUITests/Pods-Redditly-RedditlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D45044AB2489429E003E4A6E /* Redditly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redditly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45044AE2489429E003E4A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45044B7248942A2003E4A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +70,7 @@
 		D49CD4932489651F003586FD /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		D4D07F68248AE6D800BF8F93 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
+		FF31EB23DEE37A8A69BB3DA8 /* Pods-Redditly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redditly.debug.xcconfig"; path = "Target Support Files/Pods-Redditly/Pods-Redditly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F318B18B2E7B67049AA44665 /* Pods_Redditly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11A74FC6EEE3638CBA75BB9 /* Pods_RedditlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +94,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43AB5A549CCD4CA34E3E6BF /* Pods_Redditly_RedditlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61CF2A00D441B1879FE3FB71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF31EB23DEE37A8A69BB3DA8 /* Pods-Redditly.debug.xcconfig */,
+				90D74A6819E4558C058D64BE /* Pods-Redditly.release.xcconfig */,
+				415509F1EE1A8EA18887D848 /* Pods-Redditly-RedditlyUITests.debug.xcconfig */,
+				D3602480A24D5D53020B31D7 /* Pods-Redditly-RedditlyUITests.release.xcconfig */,
+				2951C494B4EEF3AF89C5A828 /* Pods-RedditlyTests.debug.xcconfig */,
+				C0D3E1950EECA386585253A2 /* Pods-RedditlyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D45044A22489429E003E4A6E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +123,8 @@
 				D45044C4248942A2003E4A6E /* RedditlyTests */,
 				D45044CF248942A2003E4A6E /* RedditlyUITests */,
 				D45044AC2489429E003E4A6E /* Products */,
+				61CF2A00D441B1879FE3FB71 /* Pods */,
+				E39F1483FEFB6642C00A48A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +198,16 @@
 			path = "Article detail";
 			sourceTree = "<group>";
 		};
+		E39F1483FEFB6642C00A48A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8254CFEEBC22BBCD7F8DF /* Pods_Redditly.framework */,
+				92BE0E9A6956D1C9A0F76E51 /* Pods_Redditly_RedditlyUITests.framework */,
+				37A1C0FF0FEB2C2EDBC15E40 /* Pods_RedditlyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D45044D5248942A2003E4A6E /* Build configuration list for PBXNativeTarget "Redditly" */;
 			buildPhases = (
+				9D32BFB5F5E2341377940F26 /* [CP] Check Pods Manifest.lock */,
 				D45044A72489429E003E4A6E /* Sources */,
 				D45044A82489429E003E4A6E /* Frameworks */,
 				D45044A92489429E003E4A6E /* Resources */,
+				97E78BE888B8D17C566D32D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D45044D8248942A2003E4A6E /* Build configuration list for PBXNativeTarget "RedditlyTests" */;
 			buildPhases = (
+				4893FE33B356E0E0F48FDD85 /* [CP] Check Pods Manifest.lock */,
 				D45044BD248942A2003E4A6E /* Sources */,
 				D45044BE248942A2003E4A6E /* Frameworks */,
 				D45044BF248942A2003E4A6E /* Resources */,
@@ -209,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D45044DB248942A2003E4A6E /* Build configuration list for PBXNativeTarget "RedditlyUITests" */;
 			buildPhases = (
+				71B0C9B2CAF941B2F9E842D9 /* [CP] Check Pods Manifest.lock */,
 				D45044C8248942A2003E4A6E /* Sources */,
 				D45044C9248942A2003E4A6E /* Frameworks */,
 				D45044CA248942A2003E4A6E /* Resources */,
+				5B3513A1A50704222C7D5064 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +338,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4893FE33B356E0E0F48FDD85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RedditlyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B3513A1A50704222C7D5064 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Redditly-RedditlyUITests/Pods-Redditly-RedditlyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Redditly-RedditlyUITests/Pods-Redditly-RedditlyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Redditly-RedditlyUITests/Pods-Redditly-RedditlyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71B0C9B2CAF941B2F9E842D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Redditly-RedditlyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97E78BE888B8D17C566D32D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Redditly/Pods-Redditly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Redditly/Pods-Redditly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Redditly/Pods-Redditly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D32BFB5F5E2341377940F26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Redditly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D45044A72489429E003E4A6E /* Sources */ = {
@@ -476,6 +625,7 @@
 		};
 		D45044D6248942A2003E4A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF31EB23DEE37A8A69BB3DA8 /* Pods-Redditly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +645,7 @@
 		};
 		D45044D7248942A2003E4A6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D74A6819E4558C058D64BE /* Pods-Redditly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +665,7 @@
 		};
 		D45044D9248942A2003E4A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2951C494B4EEF3AF89C5A828 /* Pods-RedditlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +688,7 @@
 		};
 		D45044DA248942A2003E4A6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D3E1950EECA386585253A2 /* Pods-RedditlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -558,6 +711,7 @@
 		};
 		D45044DC248942A2003E4A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 415509F1EE1A8EA18887D848 /* Pods-Redditly-RedditlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +732,7 @@
 		};
 		D45044DD248942A2003E4A6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3602480A24D5D53020B31D7 /* Pods-Redditly-RedditlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
