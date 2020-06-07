@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,12 @@
 		D49CD4902489525A003586FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49CD48E2489525A003586FD /* LaunchScreen.storyboard */; };
 		D49CD49224896074003586FD /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD49124896074003586FD /* ImageCache.swift */; };
 		D49CD4942489651F003586FD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD4932489651F003586FD /* ArticleViewController.swift */; };
+		D4B9D1A3248C867700DDB649 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D1A2248C867700DDB649 /* TestData.json */; };
+		D4B9D1A4248C867700DDB649 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D1A2248C867700DDB649 /* TestData.json */; };
+		D4B9D1A6248C878200DDB649 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D1A5248C878200DDB649 /* DataProvider.swift */; };
+		D4B9D1A8248C890900DDB649 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D1A7248C890900DDB649 /* MockApiManager.swift */; };
+		D4B9D1AA248C97EC00DDB649 /* TestDataEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D1A9248C97EC00DDB649 /* TestDataEmpty.json */; };
+		D4B9D1AB248C97EC00DDB649 /* TestDataEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D1A9248C97EC00DDB649 /* TestDataEmpty.json */; };
 		D4D07F69248AE6D800BF8F93 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D07F68248AE6D800BF8F93 /* ReusableView.swift */; };
 		D4D07F6B248AE6E700BF8F93 /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */; };
 		E11A74FC6EEE3638CBA75BB9 /* Pods_RedditlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A1C0FF0FEB2C2EDBC15E40 /* Pods_RedditlyTests.framework */; };
@@ -63,11 +69,15 @@
 		D45044D2248942A2003E4A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49CD4832489438F003586FD /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		D49CD4852489443E003586FD /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		D49CD48924894BD5003586FD /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = Model/ApiManager.swift; sourceTree = "<group>"; };
+		D49CD48924894BD5003586FD /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		D49CD48C24895253003586FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Redditly/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		D49CD48F2489525A003586FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Redditly/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		D49CD49124896074003586FD /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Redditly/ImageCache.swift; sourceTree = "<group>"; };
+		D49CD49124896074003586FD /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		D49CD4932489651F003586FD /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		D4B9D1A2248C867700DDB649 /* TestData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
+		D4B9D1A5248C878200DDB649 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		D4B9D1A7248C890900DDB649 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
+		D4B9D1A9248C97EC00DDB649 /* TestDataEmpty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestDataEmpty.json; sourceTree = "<group>"; };
 		D4D07F68248AE6D800BF8F93 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 		FF31EB23DEE37A8A69BB3DA8 /* Pods-Redditly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redditly.debug.xcconfig"; path = "Target Support Files/Pods-Redditly/Pods-Redditly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,14 +121,12 @@
 				2951C494B4EEF3AF89C5A828 /* Pods-RedditlyTests.debug.xcconfig */,
 				C0D3E1950EECA386585253A2 /* Pods-RedditlyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D45044A22489429E003E4A6E = {
 			isa = PBXGroup;
 			children = (
-				D49CD49124896074003586FD /* ImageCache.swift */,
 				D45044AD2489429E003E4A6E /* Redditly */,
 				D45044C4248942A2003E4A6E /* RedditlyTests */,
 				D45044CF248942A2003E4A6E /* RedditlyUITests */,
@@ -142,9 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				D45044AE2489429E003E4A6E /* AppDelegate.swift */,
-				D49CD48924894BD5003586FD /* ApiManager.swift */,
+				D4B9D1AC248C987F00DDB649 /* Data */,
 				D49CD48824894449003586FD /* User Interface */,
 				D49CD48724894445003586FD /* Model */,
+				D49CD49124896074003586FD /* ImageCache.swift */,
+				D4B9D1A2248C867700DDB649 /* TestData.json */,
+				D4B9D1A9248C97EC00DDB649 /* TestDataEmpty.json */,
 				D45044B7248942A2003E4A6E /* Assets.xcassets */,
 				D45044BC248942A2003E4A6E /* Info.plist */,
 			);
@@ -187,6 +198,16 @@
 				D4D07F6A248AE6E700BF8F93 /* TableViewCells.swift */,
 			);
 			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		D4B9D1AC248C987F00DDB649 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9D1A5248C878200DDB649 /* DataProvider.swift */,
+				D49CD48924894BD5003586FD /* ApiManager.swift */,
+				D4B9D1A7248C890900DDB649 /* MockApiManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D4D07F6C248AE6F000BF8F93 /* Article detail */ = {
@@ -318,8 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49CD4902489525A003586FD /* LaunchScreen.storyboard in Resources */,
+				D4B9D1AA248C97EC00DDB649 /* TestDataEmpty.json in Resources */,
 				D45044B8248942A2003E4A6E /* Assets.xcassets in Resources */,
 				D49CD48D24895253003586FD /* Main.storyboard in Resources */,
+				D4B9D1A3248C867700DDB649 /* TestData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +350,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B9D1A4248C867700DDB649 /* TestData.json in Resources */,
+				D4B9D1AB248C97EC00DDB649 /* TestDataEmpty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,12 +472,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B9D1A8248C890900DDB649 /* MockApiManager.swift in Sources */,
 				D49CD49224896074003586FD /* ImageCache.swift in Sources */,
 				D49CD4942489651F003586FD /* ArticleViewController.swift in Sources */,
 				D49CD4842489438F003586FD /* ListingViewController.swift in Sources */,
 				D45044AF2489429E003E4A6E /* AppDelegate.swift in Sources */,
 				D4D07F6B248AE6E700BF8F93 /* TableViewCells.swift in Sources */,
 				D49CD48A24894BD5003586FD /* ApiManager.swift in Sources */,
+				D4B9D1A6248C878200DDB649 /* DataProvider.swift in Sources */,
 				D4D07F69248AE6D800BF8F93 /* ReusableView.swift in Sources */,
 				D49CD4862489443E003586FD /* Models.swift in Sources */,
 			);

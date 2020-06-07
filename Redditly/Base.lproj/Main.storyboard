@@ -19,6 +19,23 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="spl-aV-V76">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" hidden="YES" contentMode="scaleToFill" id="pEa-cJ-pWS">
+                                    <rect key="frame" x="0.0" y="226" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-ko-wdm">
+                                            <rect key="frame" x="188" y="11.5" width="38" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="fFP-ko-wdm" firstAttribute="centerY" secondItem="pEa-cJ-pWS" secondAttribute="centerY" id="R6R-6W-QsS"/>
+                                        <constraint firstItem="fFP-ko-wdm" firstAttribute="centerX" secondItem="pEa-cJ-pWS" secondAttribute="centerX" id="o5g-W9-Rwz"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="1r0-Mq-wky" customClass="ArticleCell" customModule="Redditly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="170"/>
@@ -78,6 +95,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabel" destination="fFP-ko-wdm" id="aVJ-tO-I14"/>
                         <outlet property="sortButton" destination="w6C-7Q-0az" id="HlL-NA-duD"/>
                         <outlet property="tableView" destination="spl-aV-V76" id="XqS-gw-CME"/>
                     </connections>

@@ -8,16 +8,14 @@
 
 import Foundation
 
-class ApiManager {
-    static var shared = ApiManager()
-
+class ApiManager: ArticleDataProvider {
     var baseURL: String { "https://www.reddit.com/r/swift/.json?raw_json=1" }
 
     private let defaultSession = URLSession(configuration: .default)
 
     private var dataTask: URLSessionDataTask?
 
-    func getArticles(_ completion: @escaping (Result<[Article], NetworkError>) -> Void) {
+    func getArticles(_ completion: @escaping (Result<[Article], DataProviderError>) -> Void) {
         guard let url = URL(string: baseURL) else {
             completion(.failure(.invalidBaseURL))
             return
@@ -36,23 +34,7 @@ class ApiManager {
         dataTask?.resume()
     }
 
-    func parseArticleData(_ data: Data?, error: Error?) -> Result<[Article], NetworkError> {
-        guard let data = data else {
-            return .failure(.noData(error))
-        }
-
-        do {
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-            let results = try decoder.decode(Listing.self, from: data)
-            return .success(results.data.children.map({ $0.data }))
-        } catch {
-            return .failure(.decodingFailure(error))
-        }
-    }
-
-    func getImageData(_ url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+    func getImageData(with url: URL, completion: @escaping (Result<Data, DataProviderError>) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 completion(.success(data))
@@ -62,11 +44,5 @@ class ApiManager {
         }
 
         task.resume()
-    }
-
-    enum NetworkError: Error {
-        case invalidBaseURL
-        case noData(Error?)
-        case decodingFailure(Error?)
     }
 }

@@ -9,35 +9,39 @@
 import XCTest
 
 class RedditlyUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    override func setUp() {
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    var app: XCUIApplication = {
         let app = XCUIApplication()
+        app.launchArguments = ["-running_tests"]
+        return app
+    }()
+
+    func testLoadNormal() {
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let title = app.tables.cells.element(boundBy: 0).staticTexts["What’s everyone working on this month? (June 2020)"]
+        XCTAssertTrue(title.waitForExistence(timeout: 5), "Incorrect article in 1st row")
+
+        app.tables.cells.element(boundBy: 0).tap()
+
+        let score = app.tables.cells.element(boundBy: 2).staticTexts["Score: 14 Upvote ratio: 0.86\nJun 1, 2020 at 4:07:47 PM"]
+        XCTAssertTrue(score.waitForExistence(timeout: 5), "Missing score row")
+
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssertTrue(title.isHittable, "Back didn't work")
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+    func testLoadEmpty() {
+        app.launchArguments.append("-empty_data")
+        app.launch()
+
+        XCTAssertEqual(app.tables.cells.count, 0, "App should not load any data when json is empty")
+
+        let errorLabel = app.staticTexts["No results"]
+        XCTAssertTrue(errorLabel.waitForExistence(timeout: 5), "Missing error label")
+        XCTAssertTrue(errorLabel.isHittable, "Error label not visible")
     }
 }

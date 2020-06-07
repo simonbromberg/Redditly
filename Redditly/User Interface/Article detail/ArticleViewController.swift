@@ -90,7 +90,7 @@ class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewD
             if image == nil,
                 article.hasThumbnail,
                 let url = article.thumbnailURL {
-                ApiManager.shared.getImageData(url) { [weak self] result in
+                DataProvider.shared.getImageData(with: url) { [weak self] result in
                     switch result {
                     case .success(let data):
                         self?.image = UIImage(data: data)

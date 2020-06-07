@@ -9,7 +9,8 @@
 import UIKit
 
 class ListingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var errorLabel: UILabel!
 
     var articles = [Article]()
     private let thumbnailCache = ImageCache()
@@ -31,17 +32,27 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     private func getArticles(_ completion: (() -> Void)? = nil) {
-        ApiManager.shared.getArticles { [weak self] result in
+        DataProvider.shared.getArticles { [weak self] result in
+            var errorMessage: String?
+
             switch result {
             case .success(let articles):
                 self?.articles = articles
+                if articles.count == 0 {
+                    errorMessage = NSLocalizedString("No results", comment: "Error message")
+                }
             case .failure(let error):
                 print(error) // TODO: show error
                 self?.articles = []
+                errorMessage = error.localizedDescription
             }
 
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
+
+                self?.tableView.tableFooterView?.isHidden = errorMessage == nil
+                self?.errorLabel.text = errorMessage
+
                 completion?()
             }
         }
@@ -81,7 +92,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
             article.hasThumbnail,
             let link = article.thumbnail,
             let url = URL(string: link) {
-            ApiManager.shared.getImageData(url) { [weak self] result in
+            DataProvider.shared.getImageData(with: url) { [weak self] result in
                 switch result {
                 case .success(let data):
                     DispatchQueue.main.async {
