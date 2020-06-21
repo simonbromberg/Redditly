@@ -9,20 +9,33 @@
 import Foundation
 
 class ApiManager: ArticleDataProvider {
-    var baseURL: String { "https://www.reddit.com/r/swift/.json?raw_json=1" }
+    var baseURL: String { "https://www.reddit.com/r/swift/.json" }
 
     private let defaultSession = URLSession(configuration: .default)
 
     private var dataTask: URLSessionDataTask?
 
-    func getArticles(_ completion: @escaping (Result<[Article], DataProviderError>) -> Void) {
-        guard let url = URL(string: baseURL) else {
+    func getArticles(after: String?, completion: @escaping (ArticleParseResult) -> Void) {
+        guard let baseURL = URL(string: baseURL) else {
             completion(.failure(.invalidBaseURL))
             return
         }
 
+        var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+
+        var queryItems = [URLQueryItem]()
+        queryItems.append(URLQueryItem(name: "after", value: after))
+        queryItems.append(URLQueryItem(name: "raw_json", value: "1"))
+
+        components?.queryItems = queryItems
+
         // Cancel any previously running tasks (because of simplicity of app, we know that only one employee list download should be happening at a time)
         dataTask?.cancel()
+
+        guard let url = components?.url else {
+            completion(.failure(.invalidBaseURL))
+            return
+        }
 
         let request = URLRequest(url: url)
 

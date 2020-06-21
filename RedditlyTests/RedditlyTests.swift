@@ -21,10 +21,11 @@ class RedditlyTests: XCTestCase {
         let apiManager = MockApiManager()
         apiManager.articleData = data
 
-        apiManager.getArticles { result in
+        apiManager.getArticles(after: nil) { result in
             do {
                 switch result {
-                case .success(let articles):
+                case .success(let articleResult):
+                    let articles = articleResult.articles
                     XCTAssertEqual(articles.count, 26, "Number of articles does not match test data")
 
                     let article = try XCTUnwrap(articles.first, "Unable to get first article")

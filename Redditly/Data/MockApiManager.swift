@@ -12,7 +12,7 @@ class MockApiManager: ArticleDataProvider {
     var articleData: Data?
     var articleError: Error?
 
-    func getArticles(_ completion: @escaping (ArticleParseResult) -> Void) {
+    func getArticles(after: String?, completion: @escaping (ArticleParseResult) -> Void) {
         let result = parseArticleData(articleData, error: articleError)
         completion(result)
     }

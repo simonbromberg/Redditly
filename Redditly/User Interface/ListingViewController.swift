@@ -13,6 +13,9 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet private var errorLabel: UILabel!
 
     var articles = [Article]()
+    private var page: String?
+    private var isLoading = false
+
     private let thumbnailCache = ImageCache()
 
     override func viewDidLoad() {
@@ -32,18 +35,22 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     private func getArticles(_ completion: (() -> Void)? = nil) {
-        DataProvider.shared.getArticles { [weak self] result in
+        isLoading = true
+
+        DataProvider.shared.getArticles(after: page) { [weak self] result in
             var errorMessage: String?
 
             switch result {
-            case .success(let articles):
-                self?.articles = articles
-                if articles.count == 0 {
+            case .success(let articleResult):
+                self?.articles += articleResult.articles
+                self?.page = articleResult.page
+
+                if self?.articles.isEmpty != false {
                     errorMessage = NSLocalizedString("No results", comment: "Error message")
                 }
             case .failure(let error):
                 print(error) // TODO: show error
-                self?.articles = []
+//                self?.articles = []
                 errorMessage = error.localizedDescription
             }
 
@@ -52,6 +59,8 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
                 self?.tableView.tableFooterView?.isHidden = errorMessage == nil
                 self?.errorLabel.text = errorMessage
+
+                self?.isLoading = false
 
                 completion?()
             }
@@ -66,6 +75,8 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @objc private func pullToRefresh() {
         thumbnailCache.removeAllObjects()
+        page = nil
+        articles.removeAll()
 
         getArticles { [weak self] in
             self?.refreshControl.endRefreshing()
@@ -132,6 +143,17 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
             let article = articles[row]
             destination.article = article
             destination.image = thumbnailCache[article.id]
+        }
+    }
+
+    // MARK: UIScrollViewDelegate
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        let height = scrollView.contentSize.height - scrollView.frame.height
+
+        if position >= height && !isLoading {
+            getArticles()
         }
     }
 

@@ -18,14 +18,19 @@ struct DataProvider {
     static var shared: ArticleDataProvider = ApiManager()
 }
 
+struct ArticleResult {
+    let page: String?
+    let articles: [Article]
+}
+
 protocol ArticleDataProvider {
-    func getArticles(_ completion: @escaping (ArticleParseResult) -> Void)
+    func getArticles(after: String?, completion: @escaping (ArticleParseResult) -> Void)
 
     func getImageData(with url: URL, completion: @escaping (Result<Data, DataProviderError>) -> Void)
 }
 
 extension ArticleDataProvider {
-    typealias ArticleParseResult = Result<[Article], DataProviderError>
+    typealias ArticleParseResult = Result<ArticleResult, DataProviderError>
 
     func parseArticleData(_ data: Data?, error: Error?) -> ArticleParseResult {
         guard let data = data else {
@@ -37,7 +42,9 @@ extension ArticleDataProvider {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
 
             let results = try decoder.decode(Listing.self, from: data)
-            return .success(results.data.children.map({ $0.data }))
+            let data = results.data
+            let result = ArticleResult(page: data.after, articles: data.children.map({ $0.data }))
+            return .success(result)
         } catch {
             return .failure(.decodingFailure(error))
         }
